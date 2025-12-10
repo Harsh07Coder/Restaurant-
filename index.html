@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Bella Vita - Restaurant</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #8B0000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #8B0000;
+    }
+
+    /* Menu Section */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: #fff8f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .menu-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .menu-item span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #8B0000;
+    }
+
+    /* Reservation Form */
+    form {
+      background: #fff8f0;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      border: 1px solid #ddd;
+    }
+
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #8B0000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    form button:hover {
+      background: #a52a2a;
+    }
+
+    /* Reviews */
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .review {
+      background: #fff8f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .review h4 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .review p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      background: #8B0000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>La Bella Vita</h1>
+    <p>Authentic Italian Cuisine</p>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#reservation">Reservation</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with fresh mozzarella, basil, and tomato sauce.</p>
+        <span>$12</span>
+      </div>
+      <div class="menu-item">
+        <h3>Spaghetti Carbonara</h3>
+        <p>Traditional pasta with pancetta, egg, and parmesan cheese.</p>
+        <span>$15</span>
+      </div>
+      <div class="menu-item">
+        <h3>Tiramisu</h3>
+        <p>Delicious coffee-flavored Italian dessert.</p>
+        <span>$8</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservation">
+    <h2>Book a Table</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" name="guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+      <div class="review">
+        <h4>Mansi </h4>
+        <p>"The best Italian food I’ve ever had! Cozy atmosphere and friendly staff."</p>
+      </div>
+      <div class="review">
+        <h4>Jaikishan.J.C</h4>
+        <p>"Loved the pizza and tiramisu. Highly recommend for a family dinner."</p>
+      </div>
+      <div class="review">
+        <h4>Anita R.</h4>
+        <p>"Great service and authentic flavors. Will definitely come back again!"</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 La Bella Vita Restaurant | Designed with ❤️</p>
+  </footer>
+
+</body>
+</html>
